@@ -5,11 +5,13 @@ const { EventEmitter } = require('events')
 // https://dashflo.net/docs/api/pterodactyl/v1/
 
 class pterosocket extends EventEmitter {
-    constructor(origin, api_key, server_no){
+    constructor(origin, api_key, server_no, auto_connect=true){
         super();
         this.origin = origin;
         this.api_key = api_key;
         this.server_no = server_no;
+        if (auto_connect)
+            this.connect();
     }
     
     async get_new_login(){
