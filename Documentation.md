@@ -9,7 +9,7 @@ Closes the connection to the panel
 * event: string
 * callback: function
 
-Event listener, you can find a list of events here.
+Event listener, you can find a list of events [here](#events).
 ``` js
 socket.on('console_output', (output)=>{
     console.log(output)
@@ -39,7 +39,7 @@ Sends a power action to the console (like turning it on or off).
 ### pterosocket.write(packet)
 * packet: object
 
-Sends a packet to the console. The packet needs to be formatted according to the description in the [documentation](https://dashflo.net/docs/api/pterodactyl/v1/#req_2c867e1e1f6b448b9e99f9daeebb7e9a)
+Sends a packet to the console. The packet needs to be formatted according to the description in the [API documentation](https://dashflo.net/docs/api/pterodactyl/v1/#req_2c867e1e1f6b448b9e99f9daeebb7e9a)
 
 ## Events
 ### start
