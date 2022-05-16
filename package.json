@@ -1,0 +1,28 @@
+{
+  "name": "pterosocket",
+  "version": "1.0.0",
+  "description": "A websocket implementation for the pterodactyl server console.",
+  "main": "pterosocket.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InnateAlpaca/pterosocket.git"
+  },
+  "keywords": [
+    "Pterodactyl",
+    "Websocket",
+    "Bedrock",
+    "Game-console"
+  ],
+  "author": "innatealpaca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InnateAlpaca/pterosocket/issues"
+  },
+  "homepage": "https://github.com/InnateAlpaca/pterosocket#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.4"
+  }
+}
