@@ -27,3 +27,15 @@ socket.on("start", ()=>{
     socket.writeCommand("say console connected!");
 })
 ```
+### How do I find the parameters needed to create a new pterosocket?
+Regardless the hosting company your server is hosted by, each panel has a fixed structure. For example the webpage from which you access your console will have this format: 
+```{origin}/server/{server number}```. So, if your hosting company is e.g. ```www.bisecthosting.com``` (one of several gaming companies), your console website address will be ```https://games.bisecthosting.com/server/274w3925```, and your code will be as follows
+```js
+const origin = "https://games.bisecthosting.com"; //everything that comes before "/server" in the console url
+const server_no = "274w3925"; //everything that comes after "/server/" in the console url
+```
+Now in order to generate an API key for the pterosocket instance you need to navigate to this page ```{origin}/account/api``` (in our example it will be ```https://games.bisecthosting.com/account/api```) and generate a new API key, which we can add to our code.
+```js
+const api_key = "dwaQaLKSWmVoZfJ7jC2rAnhW6y6mKAUPuF22bqqgA5daM79S"; //the api-key generated
+```
+
