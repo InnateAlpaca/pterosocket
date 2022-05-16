@@ -4,8 +4,13 @@ A websocket implementation for the pterodactyl server console.
 Pterosocket class creates a websocket that connects to a [Pterodactyl](https://pterodactyl.io/) panel. It manages the events generated, and keeps the connection open (re-authentication is needed every 10-15 min otherwise).
 Using this tool you can easily implement a discord bot or webhook that streams the game-console through which you can send commands, check the logs, and even get the server stats in real time.
 
-The official documentation for the Pterodactyl API can be found [here](https://dashflo.net/docs/api/pterodactyl/v1/).
-
+Check the [Documentation](https://github.com/InnateAlpaca/pterosocket/blob/main/Documentation.md) for details on the usage of this class.
+The original documentation for the Pterodactyl API protocol can be found [here](https://dashflo.net/docs/api/pterodactyl/v1/).
+## Installation
+Run the following line in your terminal:
+```
+npm install pterosocket
+```
 ## Usage
 In order to connect you need to find the domain of your hosting panel (origin), the number of the server, and generate an API key form the "Account" section of the panel. Now you can subscribe the events you are interested in, and send packets to the panel.
 ```js
