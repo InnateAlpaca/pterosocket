@@ -1,8 +1,8 @@
 {
   "name": "pterosocket",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A websocket implementation for the pterodactyl server console.",
-  "main": "pterosocket.js",
+  "main": "index.js",
   "scripts": {
     "test": "node main.js"
   },
