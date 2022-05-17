@@ -64,6 +64,9 @@ class pterosocket extends EventEmitter {
         const login = await this.get_new_login();
         if (!login)
             throw "Couldn't connect - server didn't provide credentials."
+        if (this.ws){
+            this.close();
+        }
         const {token, socket} = login;
         
         this.ws = new WebSocket(socket, {
