@@ -1,4 +1,6 @@
 node_modules
+examples
+my_tests
 npm-debug.log
 *.bak
 .git
