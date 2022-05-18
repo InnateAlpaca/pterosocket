@@ -14,18 +14,27 @@ class pterosocket extends EventEmitter {
             this.connect();
     }
     
-    async get_new_login(){
-        const response = await fetch(`${this.origin}/api/client/servers/${this.server_no}/websocket`, {
-            "method": "GET",
+    async apiRequest(service, body='', method='GET'){
+        const options = {
+            "method": method,
             "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${this.api_key}`
             }
-        }).then((data) => { return data.json()});
+        };
+        if (body)
+            options.body = body;
+        const response = await fetch(`${this.origin}/api/client/servers/${this.server_no}/${service}`, options).then((data) => { return data.json()});
+        
+        return response;
+    }
+
+    async get_new_login(){
+        const response = await this.apiRequest('websocket');
         if ("data" in response){
             return response.data;
-        }
+        } 
     }
 
     async #authLogin(token = ""){
